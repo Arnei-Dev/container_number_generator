@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Oswald:wght@600&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+  /*  background-color: gray;*/
+}
+header {
+    background-color: #091942;
+    text-align: center;
+    height: 80px;
+    color: white;
+}
+h1 {
+    font-family: 'Oswald', sans-serif;
+    margin: 0 auto;
+}
+h2 {
+    font-family: 'Oswald', sans-serif;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+a:link {
+    text-decoration: none;
+}
+a {
+    color: white;
+}
+i {
+    font-size: 25px;
+    color: white;
+    margin-top: 3px;
+}
+.container {
+    border: 1px solid #091942;
+    width: 60vw;
+    height: 72vh;
+    display: table;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: inherit;
+}
+.container .descricao {
+    margin: 4px 4px;
+}
+.container .formulario{
+    margin: 4px 4px;
+}
+input {
+    width: 300px;
+    height: 30px;
+    border-radius: 05px;
+    font-size: larger;
+    text-align: center;
+}
+button {
+    width: 90px;
+    height: 30px;
+    border-radius: 05px;
+}
+button:hover {
+    transition: 0.5;
+    color: gray;
+}
+footer {
+    background-color: #091942;
+    text-align: center;
+    height: 80px;
+    color: white;   
+}
