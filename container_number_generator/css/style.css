@@ -2,19 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Oswald:wght@600&display=swap');
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
 }
 body{
   /*  background-color: gray;*/
 }
 header {
     background-color: #091942;
+    position: fixed;
     text-align: center;
     height: 80px;
+    width: 100vw;
     color: white;
+    margin-top: -80px;
 }
 h1 {
     font-family: 'Oswald', sans-serif;
-    margin: 0 auto;
+    margin: 0;
 }
 h2 {
     font-family: 'Oswald', sans-serif;
@@ -27,6 +32,7 @@ a:link {
 }
 a {
     color: white;
+    padding: 5px;
 }
 i {
     font-size: 25px;
@@ -36,13 +42,14 @@ i {
 .container {
     border: 1px solid #091942;
     width: 60vw;
-    height: 72vh;
+    height: 100vh;
     display: table;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-top: inherit;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 .container .descricao {
     margin: 4px 4px;
