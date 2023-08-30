@@ -1,12 +1,16 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Oswald&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;  
 }
 body{
-  /*  background-color: gray;*/
+    background-image: url(../img/container.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    opacity: 0.9;
 }
 header {
     background-color: #091942;
@@ -15,7 +19,7 @@ header {
     height: 80px;
     width: 100vw;
     color: white;
-    margin-top: -80px;
+    margin-top: -161px;
 }
 h1 {
     font-family: 'Oswald', sans-serif;
@@ -23,6 +27,8 @@ h1 {
 }
 h2 {
     font-family: 'Oswald', sans-serif;
+    text-align: center;
+    padding-bottom: 40px;
 }
 p {
     font-family: 'Montserrat', sans-serif;
@@ -32,15 +38,18 @@ a:link {
 }
 a {
     color: white;
-    padding: 5px;
+    padding: 8px;
 }
 i {
     font-size: 25px;
     color: white;
     margin-top: 3px;
 }
+img {
+    padding-bottom: 30px;
+}
 .container {
-    border: 1px solid #091942;
+  /*  border: 1px solid #091942;*/
     width: 60vw;
     height: 100vh;
     display: table;
@@ -48,14 +57,18 @@ i {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 10rem;
     margin-bottom: 5rem;
+    background: linear-gradient(90deg, #aeb3b4, #c6efea, #fefcf9);
 }
 .container .descricao {
     margin: 4px 4px;
+    padding: 5%;
+    text-align: center;
 }
 .container .formulario{
     margin: 4px 4px;
+    text-align: center;
 }
 input {
     width: 300px;
@@ -63,19 +76,38 @@ input {
     border-radius: 05px;
     font-size: larger;
     text-align: center;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
 }
 button {
     width: 90px;
     height: 30px;
     border-radius: 05px;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
 }
 button:hover {
     transition: 0.5;
     color: gray;
+}
+footer p {
+    padding: 3px;
 }
 footer {
     background-color: #091942;
     text-align: center;
     height: 80px;
     color: white;   
+}
+
+@media screen and (max-width: 320px) { 
+    body { 
+        font-size: 80%;
+     } 
+     img {
+        width: 100%;
+        align-items: center;
+     }
 }
