@@ -16,7 +16,7 @@ function calculateContainerDigit(containerNumber) {
 
     const divSum = Math.floor(sum / 11);
     const multSum = divSum * 11;
-    const containerDigit = multSum - sum;
+    const containerDigit = sum - multSum;
 
     return containerDigit;
 }
@@ -24,18 +24,23 @@ function calculateContainerDigit(containerNumber) {
 // Função para gerar um número de container válido com 11 caracteres
 function generateContainerNumber() {
     const letters = Array.from({ length: 3 }, () => String.fromCharCode('A'.charCodeAt(0) + Math.floor(Math.random() * 26)));
-    const numbers = Array.from({ length: 6 }, () => Math.floor(Math.random() * 10)).join('');
+    const numbers = Array.from({ length: 6 }, () => Math.floor(Math.random() * 9)).join('');
     const containerNumber = `${letters.join('')}U${numbers}`;
     const containerDigit = calculateContainerDigit(containerNumber);
-
-    return containerNumber + containerDigit;
+    
+    return containerNumber + "-"+containerDigit;
 }
 
 // Gera e imprime um número de container válido com 11 caracteres
 
 function gerarNumeroContainer(){
     const containerNumber = generateContainerNumber();
-   // console.log(`Número de container gerado: ${containerNumber}`);
-    document.getElementById("container").value = containerNumber;
+    //Condição para atender a regra de identificação do container: Exibir somente 11 digitos
+    if(containerNumber.length == 12){
+        document.getElementById("container").value = containerNumber;
+    }else{
+        //Função recursiva
+        gerarNumeroContainer();
+    }
 }
 
