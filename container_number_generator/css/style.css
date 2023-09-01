@@ -83,7 +83,34 @@ input {
     text-align: center;
     box-shadow: 0 0 0 0;
     border: 0 none;
-    outline: 0;
+    flex-grow: 1;
+    font-size: 20px;
+    outline: none;
+}
+input:hover {
+    background-color: #eeee;
+}
+.btn-copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.btn-copy-button {
+    flex-shrink: 0;
+    width: var(--height);
+    height: var(--height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ddd;
+    color: #091942;
+    outline: none;
+    border: 1px solid;
+}
+.btn-copy-button:hover {
+    background-color: #cccc;
 }
 button {
     background-color: #091942;

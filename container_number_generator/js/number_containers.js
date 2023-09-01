@@ -27,20 +27,27 @@ function generateContainerNumber() {
     const numbers = Array.from({ length: 6 }, () => Math.floor(Math.random() * 9)).join('');
     const containerNumber = `${letters.join('')}U${numbers}`;
     const containerDigit = calculateContainerDigit(containerNumber);
-    
-    return containerNumber + "-"+containerDigit;
+
+    return containerNumber + "-" + containerDigit;
 }
 
 // Gera e imprime um número de container válido com 11 caracteres
 
-function gerarNumeroContainer(){
+function gerarNumeroContainer() {
     const containerNumber = generateContainerNumber();
     //Condição para atender a regra de identificação do container: Exibir somente 11 digitos
-    if(containerNumber.length == 12){
+    if (containerNumber.length == 12) {
         document.getElementById("container").value = containerNumber;
-    }else{
+    } else {
         //Função recursiva
         gerarNumeroContainer();
+    }
+
+    //Seleciona e copia o número gerado na tela pelo usúario
+    document.getElementById('btn-copy').addEventListener('click', inputCopy);
+    function inputCopy() {
+        document.querySelector("#container").select();
+        document.execCommand("copy");
     }
 }
 
