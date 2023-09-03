@@ -9,7 +9,6 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /*overflow: hidden;*/
     height: 100%;
     opacity: 0.9;
 }
@@ -45,11 +44,8 @@ i {
     color: white;
     margin-top: 3px;
 }
-img {
-  /*  padding: 30px;*/
-}
+
 .container {
-  /*  border: 1px solid #091942;*/
     width: 60vw;
     height: 100%;
     display: table;
@@ -75,52 +71,86 @@ img {
     text-align: center;
     padding: 3%;
 }
-input {
-    width: 300px;
+#container {
+    width: 170px;
     height: 30px;
     border-radius: 05px;
-    font-size: larger;
+    font-size: xx-large;
     text-align: center;
     box-shadow: 0 0 0 0;
     border: 0 none;
     flex-grow: 1;
-    font-size: 20px;
+    font-size: 22px;
     outline: none;
 }
-input:hover {
-    background-color: #eeee;
-}
 .btn-copy {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
     margin: 0 auto;
 }
-.btn-copy-button {
-    flex-shrink: 0;
-    width: var(--height);
-    height: var(--height);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ddd;
-    color: #091942;
+#btn-copy {
+    /*display: none;*/
+    visibility: hidden;
+}
+
+.btn-copy .btn-copy-button {
+    background: #fff;
+    width: 40px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
     outline: none;
-    border: 1px solid;
 }
-.btn-copy-button:hover {
-    background-color: #cccc;
+
+#btn-copiado {
+    position: absolute;
+    background-color: #4675D5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px;
+    border: 0;
+    margin-top: -70px;
+    padding: 3px 10px;
+    display: none;
 }
+
+#btn-cop {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #4675D5;
+    transform: rotate(45deg);
+    margin-top: -45px;
+    display: none;
+}
+
+#btn-copy .fa-regular:hover {
+    opacity: 1;
+    transition: 0.7;
+}
+#btn-copy .fa-regular {
+    color: #091942;
+    opacity: 0.5;
+    background-color: #FFFFFF;
+    border: 0;
+}
+
 button {
     background-color: #091942;
-    color: #F5F5F5;
+    color: #fff;
     width: 90px;
     height: 30px;
     border-radius: 05px;
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
+    cursor: pointer;
 }
 button:hover {
     transition: 0.5;
@@ -137,7 +167,7 @@ footer {
     clear: both;  
 }
 
-@media screen and (max-width: 376px) { 
+@media screen and (max-width: 426px) { 
     body { 
         font-size: 80%;
      } 
@@ -148,4 +178,10 @@ footer {
      h1 {
         font-size: x-large;
      }
+     input {
+        font-size: 20px;
+    }
+    .btn-copy {
+        width: 100%;
+    }
 }

@@ -23,7 +23,7 @@
                 superior e interior e deve obedecer a seguinte regra Internacional:
             </p>
             <p>
-                Ter 11 dígitos, sendo os 4 primeiros dígitos letras e a quarta letra sempre será "U", os 7
+                Ter 11 dígitos, sendo os 4 primeiros dígitos letras e a quarta letra será "U", os 7
                 últimos dígitos são numéricos e o último número dos 7 é o digito verificador. Esta norma de codificação
                 foi criada pela agência de classificação ISO (International Standards Organization) sob o seu código
                 ISO6346:1995(E).
@@ -32,10 +32,12 @@
         <div class="formulario">
             <form method="post">
                 <div class="btn-copy">
-                    <input type="text" id="container">
+                    <input type="text" id="container" class="input-text" value=""readonly>
                     <button id="btn-copy" type="button" class="btn-copy-button">
-                        <i class="fa-regular fa-copy"></i>
+                        <i id="btn-i" class="fa-regular fa-copy"></i>
                     </button>
+                    <div id="btn-cop"></div>
+                    <div id="btn-copiado">Copiado</div>
                 </div>
                 <div><br>
                     <button type="button" onclick="gerarNumeroContainer()">
@@ -44,7 +46,6 @@
                 </div>
             </form>
         </div>
-
     </section>
     <footer>
         <p>
@@ -57,6 +58,7 @@
     </footer>
     <script type="text/javascript" src="../js/number_containers.js"></script>
     <script src="https://kit.fontawesome.com/52d98fe718.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 
 </html>

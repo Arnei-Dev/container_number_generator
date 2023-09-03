@@ -38,16 +38,28 @@ function gerarNumeroContainer() {
     //Condição para atender a regra de identificação do container: Exibir somente 11 digitos
     if (containerNumber.length == 12) {
         document.getElementById("container").value = containerNumber;
+        //Exibi botão para copiar o código
+        document.getElementById('btn-copy').style.visibility = "visible";
     } else {
         //Função recursiva
         gerarNumeroContainer();
     }
-
-    //Seleciona e copia o número gerado na tela pelo usúario
-    document.getElementById('btn-copy').addEventListener('click', inputCopy);
-    function inputCopy() {
-        document.querySelector("#container").select();
-        document.execCommand("copy");
-    }
 }
 
+//Seleciona e copia o número gerado na tela pelo usúario
+document.getElementById('btn-copy').addEventListener('click', inputCopy);
+function inputCopy() {
+    document.querySelector("#container").select();
+    document.execCommand("copy");
+    document.getElementById('btn-copiado').style.display = "block";
+    document.getElementById('btn-cop').style.display = "block";
+    document.getElementById('btn-copy').style.visibility = "hidden";
+
+    setTimeout(function() {
+        $('#btn-cop').fadeOut(3000);
+     }, 400);
+
+     setTimeout(function() {
+        $('#btn-copiado').fadeOut(3000);
+     }, 1000);
+}
