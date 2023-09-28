@@ -5,6 +5,8 @@ Temos uma ferramenta que gerência processos para transporte de container e para
 A ferramenta já se encontra hospedada, atendeu super bem a equipe e até mesmo clientes fazem uso em seus processos de homologação e treinamento de funcionários, segue o endereço:
 https://www.arneidev.com.br
 
+A Principio a ferramenta foi desenvolvida na linguagem Java, pois é a qual tenho mais conhecimento, todavia decidi disponiblizá-la na web, então refatorei todo o código para as tecnologias Javascript/Jquery/Html e Css, tive algumas dificuldades pois tenho o conhecimento raso nas tecnologias front-end, fui persistente e por meio de pesquisas e estudo consegui finalizar o projeto! 
+
 ## Regra identificação de container
 O Número do container deve obedecer a seguinte regra Internacional:
 
